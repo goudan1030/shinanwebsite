@@ -97,7 +97,7 @@ export default function HomePage() {
               <span className="text-gray-900">数字体验</span>
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              杭州石楠文化科技有限公司专注于为企业提供现代化的网站开发服务，结合最新的技术和设计理念，
+              我们专注于为企业提供现代化的网站开发服务，结合最新的技术和设计理念，
               帮助您的品牌在数字世界中脱颖而出。
             </p>
             <div className="mt-8 flex items-center gap-x-6">
