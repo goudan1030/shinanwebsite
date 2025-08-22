@@ -1,5 +1,6 @@
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
+import Counter from '@/components/Counter'
 import { 
   CodeBracketIcon, 
   DevicePhoneMobileIcon, 
@@ -15,22 +16,40 @@ import {
 
 const features = [
   {
-    name: '现代化技术栈',
-    description: '使用最新的React、Next.js和Tailwind CSS技术，确保网站性能和用户体验',
+    name: '网站开发',
+    description: '使用最新的React、Next.js和Tailwind CSS技术，打造现代化、高性能的企业网站',
     icon: CodeBracketIcon,
     gradient: 'from-blue-500 to-cyan-500',
   },
   {
-    name: '响应式设计',
-    description: '完美适配各种设备，从手机到桌面，提供一致的用户体验',
+    name: 'App/小程序开发',
+    description: '专业的移动应用开发，包括iOS、Android原生应用和微信小程序，提供完整的移动解决方案',
     icon: DevicePhoneMobileIcon,
     gradient: 'from-purple-500 to-pink-500',
   },
   {
-    name: '快速部署',
-    description: '优化的构建流程，确保网站快速加载和部署',
+    name: '系统开发',
+    description: '企业级系统开发，包括ERP、CRM、OA等管理系统，助力企业数字化转型',
     icon: RocketLaunchIcon,
     gradient: 'from-orange-500 to-red-500',
+  },
+  {
+    name: 'AI开发',
+    description: '人工智能应用开发，包括智能客服、数据分析、自动化流程等AI解决方案',
+    icon: SparklesIcon,
+    gradient: 'from-green-500 to-emerald-500',
+  },
+  {
+    name: '响应式设计',
+    description: '完美适配各种设备，从手机到桌面，提供一致的用户体验和交互设计',
+    icon: CheckCircleIcon,
+    gradient: 'from-indigo-500 to-blue-500',
+  },
+  {
+    name: '技术咨询',
+    description: '提供技术架构咨询、系统优化建议、技术选型指导等专业咨询服务',
+    icon: UserGroupIcon,
+    gradient: 'from-yellow-500 to-orange-500',
   },
 ]
 
@@ -43,11 +62,11 @@ const stats = [
 
 const testimonials = [
   {
-    body: "Photinia团队为我们打造的网站超出了预期，设计精美，功能完善，用户体验极佳。",
+    body: "石楠科技团队为我们打造的网站超出了预期，设计精美，功能完善，用户体验极佳。",
     author: {
       name: "张经理",
       handle: "ABC科技公司",
-      imageUrl: "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+      imageUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
     },
     rating: 5,
   },
@@ -56,7 +75,7 @@ const testimonials = [
     author: {
       name: "李总监",
       handle: "XYZ企业集团",
-      imageUrl: "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+      imageUrl: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
     },
     rating: 5,
   },
@@ -65,7 +84,34 @@ const testimonials = [
     author: {
       name: "王总",
       handle: "创新科技",
-      imageUrl: "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+      imageUrl: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    },
+    rating: 5,
+  },
+  {
+    body: "他们开发的移动应用非常出色，用户体验流畅，功能强大，完全满足我们的业务需求。",
+    author: {
+      name: "陈经理",
+      handle: "移动科技",
+      imageUrl: "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    },
+    rating: 5,
+  },
+  {
+    body: "企业系统开发做得很好，ERP系统帮助我们提高了工作效率，数据管理更加规范。",
+    author: {
+      name: "刘总监",
+      handle: "制造业集团",
+      imageUrl: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    },
+    rating: 5,
+  },
+  {
+    body: "AI应用开发让我们实现了智能化转型，客服效率提升明显，客户满意度大幅提高。",
+    author: {
+      name: "赵总",
+      handle: "智能科技",
+      imageUrl: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
     },
     rating: 5,
   },
@@ -76,39 +122,32 @@ export default function HomePage() {
     <div className="bg-white">
       <Navigation />
       
-      {/* Hero Section - 增加高度和动态科技感背景 */}
-      <div className="relative overflow-hidden bg-gradient-to-br from-gray-50 via-white to-gray-100 tech-grid">
-        {/* 动态科技感背景 */}
+      {/* Hero Section - 简洁科技感背景 */}
+      <div className="relative overflow-hidden bg-gradient-to-br from-gray-50 via-white to-gray-100">
+        {/* 简洁科技感背景 */}
         <div className="absolute inset-0">
-          {/* 动态光点 */}
-          <div className="absolute inset-0">
-            <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-blue-500 rounded-full animate-float opacity-60"></div>
-            <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-purple-500 rounded-full animate-glow opacity-40"></div>
-            <div className="absolute bottom-1/4 left-1/3 w-1.5 h-1.5 bg-cyan-500 rounded-full animate-float opacity-50"></div>
-            <div className="absolute top-1/2 right-1/4 w-1 h-1 bg-indigo-500 rounded-full animate-glow opacity-30"></div>
-            <div className="absolute bottom-1/3 left-1/2 w-1 h-1 bg-blue-400 rounded-full animate-float opacity-40"></div>
-          </div>
+          {/* 微妙的网格背景 */}
+          <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.01)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.01)_1px,transparent_1px)] bg-[size:100px_100px]"></div>
           
-          {/* 流动光线 */}
-          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-blue-400/30 to-transparent animate-slide"></div>
-          <div className="absolute bottom-0 right-0 w-full h-1 bg-gradient-to-l from-transparent via-purple-400/30 to-transparent animate-slide" style={{animationDelay: '2s'}}></div>
+          {/* 简单的渐变光效 */}
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-blue-50/10 to-transparent"></div>
         </div>
 
-        <div className="relative mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:flex lg:px-8 lg:py-40">
+        <div className="relative mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:flex lg:items-center lg:justify-between lg:px-8 lg:py-40">
           <div className="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl">
             <div className="mb-8">
-              <div className="inline-flex items-center rounded-full bg-white/80 backdrop-blur-sm px-3 py-1 text-sm font-medium text-gray-600 ring-1 ring-inset ring-gray-900/10 hover:bg-white/90 transition-all duration-200">
-                <SparklesIcon className="mr-2 h-4 w-4 text-blue-500" />
+              <div className="inline-flex items-center rounded-full bg-gray-50 px-4 py-2 text-sm font-medium text-gray-700 ring-1 ring-inset ring-gray-200/50">
+                <SparklesIcon className="mr-2 h-4 w-4" />
                 最新动态 →
               </div>
             </div>
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl lg:text-7xl">
+            <h1 className="text-3xl font-bold tracking-tight text-gray-900">
               打造卓越的
               <span className="text-gray-900">数字体验</span>
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              我们专注于为企业提供现代化的网站开发服务，结合最新的技术和设计理念，
-              帮助您的品牌在数字世界中脱颖而出。
+              我们是一家AI驱动的科技创新型公司，专注于为企业提供全方位的数字解决方案，包括网站开发、移动应用开发、企业系统开发、AI应用开发等，
+              结合最新的AI技术和设计理念，帮助您的品牌在数字世界中脱颖而出。
             </p>
             <div className="mt-10 flex items-center gap-x-6">
               <a
@@ -127,13 +166,13 @@ export default function HomePage() {
               </a>
             </div>
           </div>
-          <div className="mt-16 sm:mt-24 lg:mt-0 lg:flex-shrink-0 lg:flex-grow">
-            <div className="relative mx-auto max-w-2xl sm:max-w-3xl lg:max-w-2xl">
+          <div className="mt-16 sm:mt-24 lg:mt-0 lg:flex-shrink-0 lg:flex-1 lg:flex lg:justify-end">
+            <div className="relative mx-auto max-w-2xl sm:max-w-3xl lg:max-w-none lg:w-full lg:max-w-md">
               <div className="relative">
-                {/* 图片装饰背景 */}
-                <div className="absolute -inset-2 rounded-xl bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-cyan-500/20 blur-lg opacity-30 animate-pulse"></div>
+                {/* 简单的图片装饰 */}
+                <div className="absolute -inset-2 rounded-xl bg-gradient-to-r from-gray-200 to-gray-300 opacity-20 blur-lg"></div>
                 <img
-                  className="relative w-full h-auto max-w-lg rounded-xl shadow-medium ring-1 ring-gray-900/10 bg-white/90 backdrop-blur-sm"
+                  className="relative w-full h-auto max-w-lg rounded-xl shadow-medium ring-1 ring-gray-900/10"
                   src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80&w=800"
                   alt="App screenshot"
                 />
@@ -461,11 +500,12 @@ export default function HomePage() {
               <SparklesIcon className="h-4 w-4" />
               <span>为什么选择我们</span>
             </div>
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
-              专业的网站开发服务
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900">
+              我们的服务
             </h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              我们拥有丰富的经验和专业的技术团队，致力于为客户提供最优质的网站开发服务。
+              作为AI驱动的科技创新型公司，我们提供从网站开发到移动应用、企业系统、AI应用的全方位数字解决方案，
+              每个服务都融入最新的AI技术，确保为客户提供最优质的技术支持和用户体验。
             </p>
           </div>
           
@@ -557,12 +597,13 @@ export default function HomePage() {
       <div className="gradient-bg-dark section-padding">
         <div className="container-max">
           <div className="mx-auto max-w-7xl">
-            <div className="grid grid-cols-1 gap-8 lg:grid-cols-4">
+            <div className="mx-auto mt-16 grid max-w-7xl grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
               {stats.map((stat, index) => (
                 <div key={stat.id} className="text-center animate-fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
-                  <div className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl mb-2">
-                    {stat.value}
-                  </div>
+                  <Counter 
+                    end={parseInt(stat.value.replace(/\D/g, ''))} 
+                    suffix={stat.value.includes('+') ? '+' : stat.value.includes('%') ? '%' : stat.value.includes('年') ? '年+' : ''}
+                  />
                   <div className="text-lg font-semibold text-gray-300 mb-1">{stat.name}</div>
                   <div className="text-sm text-gray-400">{stat.description}</div>
                 </div>
@@ -580,17 +621,15 @@ export default function HomePage() {
               <StarIcon className="h-4 w-4" />
               <span>客户评价</span>
             </div>
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
-              听听我们的客户怎么说
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900">
+              客户评价
             </h2>
           </div>
-          <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 grid-rows-3 gap-8 text-sm leading-6 text-gray-900 sm:mt-20 sm:grid-cols-2 xl:mx-0 xl:max-w-none xl:grid-flow-col xl:grid-cols-3">
+          <div className="mx-auto mt-16 grid max-w-7xl grid-cols-1 gap-8 text-sm leading-6 text-gray-900 sm:mt-20 sm:grid-cols-2 lg:grid-cols-3">
             {testimonials.map((testimonial, testimonialIdx) => (
               <figure
                 key={testimonialIdx}
-                className={`card card-hover p-8 ${
-                  testimonialIdx === 0 ? 'sm:col-span-2 xl:col-span-1' : ''
-                }`}
+                className="card card-hover p-8"
               >
                 <div className="flex items-center gap-1 mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
@@ -633,8 +672,8 @@ export default function HomePage() {
               </svg>
             </div>
             
-            <h2 className="mx-auto max-w-2xl text-center text-3xl font-bold tracking-tight text-white sm:text-4xl">
-              准备开始您的下一个项目了吗？
+            <h2 className="mx-auto max-w-2xl text-center text-3xl font-bold tracking-tight text-white">
+              准备开始您的项目了吗？
             </h2>
             <p className="mx-auto mt-2 max-w-xl text-center text-lg leading-8 text-gray-300">
               让我们携手合作，共同打造一个令人印象深刻的数字体验。

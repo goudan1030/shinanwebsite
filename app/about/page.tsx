@@ -103,8 +103,8 @@ export default function AboutPage() {
       <div className="bg-gradient-to-br from-primary-50 via-white to-primary-50">
         <div className="container-max section-padding">
           <div className="mx-auto max-w-2xl text-center">
-            <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              关于 Photinia
+            <h1 className="text-3xl font-bold tracking-tight text-gray-900">
+              关于我们
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600">
               我们是一家专注于网站开发的专业团队，致力于为客户提供最优质的数字解决方案。
@@ -119,8 +119,8 @@ export default function AboutPage() {
         <div className="container-max">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                我们的故事
+              <h2 className="text-3xl font-bold tracking-tight text-gray-900">
+                我们的优势
               </h2>
               <p className="mt-6 text-lg leading-8 text-gray-600">
                 Photinia成立于2019年，由一群充满激情的开发者、设计师和产品经理组成。
@@ -161,7 +161,7 @@ export default function AboutPage() {
         <div className="container-max">
           <div className="mx-auto max-w-2xl lg:text-center">
             <h2 className="text-base font-semibold leading-7 text-primary-600">我们的价值观</h2>
-            <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900">
               驱动我们前进的核心价值
             </p>
             <p className="mt-6 text-lg leading-8 text-gray-600">
@@ -192,7 +192,7 @@ export default function AboutPage() {
         <div className="container-max">
           <div className="mx-auto max-w-2xl lg:text-center">
             <h2 className="text-base font-semibold leading-7 text-primary-600">我们的团队</h2>
-            <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900">
               遇见我们的核心团队
             </p>
             <p className="mt-6 text-lg leading-8 text-gray-600">
@@ -221,7 +221,7 @@ export default function AboutPage() {
         <div className="container-max">
           <div className="mx-auto max-w-2xl lg:text-center">
             <h2 className="text-base font-semibold leading-7 text-primary-600">发展历程</h2>
-            <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900">
               我们的成长轨迹
             </p>
           </div>

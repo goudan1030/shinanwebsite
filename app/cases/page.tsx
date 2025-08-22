@@ -121,8 +121,8 @@ export default function CasesPage() {
               <SparklesIcon className="h-4 w-4" />
               <span>项目案例</span>
             </div>
-            <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
-              我们的项目案例
+            <h1 className="text-3xl font-bold tracking-tight text-gray-900">
+              我们的案例展示
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600">
               探索我们为各行各业客户打造的优秀项目，每一个案例都体现了我们对品质的追求和对创新的热情。
@@ -239,8 +239,8 @@ export default function CasesPage() {
               <SparklesIcon className="h-4 w-4" />
               <span>准备开始</span>
             </div>
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
-              准备开始您的项目了吗？
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900">
+              更多精彩案例
             </h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">
               让我们携手合作，将您的想法转化为令人印象深刻的数字产品。

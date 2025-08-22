@@ -17,31 +17,27 @@ import {
 const contactInfo = [
   {
     name: '邮箱',
-    value: 'contact@photinia.com',
+    value: 'contact@shinan.com',
     icon: EnvelopeIcon,
     description: '我们会在24小时内回复您的邮件',
-    gradient: 'from-blue-500 to-cyan-500',
   },
   {
     name: '电话',
     value: '+86 138 0000 0000',
     icon: PhoneIcon,
     description: '工作日 9:00-18:00 为您服务',
-    gradient: 'from-green-500 to-emerald-500',
   },
   {
     name: '地址',
-    value: '北京市朝阳区建国门外大街1号',
+    value: '杭州市西湖区',
     icon: MapPinIcon,
     description: '欢迎预约到访，面对面交流',
-    gradient: 'from-purple-500 to-pink-500',
   },
   {
     name: '工作时间',
     value: '周一至周五 9:00-18:00',
     icon: ClockIcon,
     description: '周末和节假日休息',
-    gradient: 'from-orange-500 to-red-500',
   },
 ]
 
@@ -110,7 +106,7 @@ export default function ContactPage() {
               <SparklesIcon className="h-4 w-4" />
               <span>联系我们</span>
             </div>
-            <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
+            <h1 className="text-3xl font-bold tracking-tight text-gray-900">
               联系我们
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600">
@@ -333,8 +329,8 @@ export default function ContactPage() {
                 {contactInfo.map((info) => (
                   <div key={info.name} className="card p-6">
                     <div className="flex gap-4">
-                      <div className={`flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-r ${info.gradient}`}>
-                        <info.icon className="h-6 w-6 text-white" aria-hidden="true" />
+                      <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gray-100">
+                        <info.icon className="h-6 w-6 text-gray-600" aria-hidden="true" />
                       </div>
                       <div>
                         <h3 className="text-lg font-semibold text-gray-900">{info.name}</h3>
@@ -372,25 +368,25 @@ export default function ContactPage() {
         </div>
       </div>
 
-      {/* Map Section - 更精致的地图展示 */}
-      <div className="section-padding bg-gray-50">
-        <div className="container-max">
-          <div className="mx-auto max-w-2xl lg:text-center">
-            <div className="inline-flex items-center space-x-2 rounded-full bg-primary-50 px-4 py-2 text-sm font-medium text-primary-700 ring-1 ring-inset ring-primary-600/20 mb-6">
+      {/* Map Section - 黑色风格地图展示 */}
+      <div className="bg-gray-900">
+        <div className="container-max py-12">
+          <div className="mx-auto max-w-2xl lg:text-center mb-8">
+            <div className="inline-flex items-center space-x-2 rounded-full bg-gray-800 px-4 py-2 text-sm font-medium text-gray-300 ring-1 ring-inset ring-gray-700 mb-6">
               <MapPinIcon className="h-4 w-4" />
               <span>我们的位置</span>
             </div>
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
+            <h2 className="text-3xl font-bold tracking-tight text-white">
               欢迎到访
             </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
-              我们位于北京市朝阳区，交通便利，欢迎预约到访，面对面交流项目细节。
+            <p className="mt-6 text-lg leading-8 text-gray-300">
+              我们位于杭州市西湖区，交通便利，欢迎预约到访，面对面交流项目细节。
             </p>
           </div>
           
-          <div className="mt-12">
-            <div className="card overflow-hidden">
-              <div className="aspect-[16/9] bg-gray-200">
+          <div className="w-full">
+            <div className="w-full overflow-hidden rounded-2xl">
+              <div className="aspect-[3/1] bg-gray-800">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3051.1234567890123!2d116.1234567890123!3d39.1234567890123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMznCsDA3JzM0LjQiTiAxMTbCsDA3JzM0LjQiRQ!5e0!3m2!1sen!2scn!4v1234567890123"
                   width="100%"
