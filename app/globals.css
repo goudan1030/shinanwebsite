@@ -1,0 +1,163 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  
+  /* 导航背景色 - 支持亮色和暗色主题 */
+  .nav-bg {
+    background-color: var(--light, rgb(247 247 248 / 0.8));
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    .nav-bg {
+      background-color: var(--dark, rgb(19 19 22 / var(--opacity)));
+    }
+  }
+}
+
+@layer components {
+  /* 更精致的按钮样式，完全参考Clerk设计 */
+  .btn-primary {
+    @apply bg-gray-900 hover:bg-gray-800 text-white font-medium py-3 px-6 rounded-lg transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 shadow-soft hover:shadow-medium inline-flex items-center justify-center min-w-fit;
+  }
+  
+  .btn-secondary {
+    @apply bg-white hover:bg-gray-50 text-gray-700 hover:text-gray-900 font-medium py-3 px-6 rounded-lg border border-gray-200 transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 shadow-soft hover:shadow-medium inline-flex items-center justify-center min-w-fit;
+  }
+  
+  .btn-outline {
+    @apply bg-transparent hover:bg-gray-50 text-gray-700 hover:text-gray-900 font-medium py-3 px-6 rounded-lg border border-gray-200 transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 inline-flex items-center justify-center min-w-fit;
+  }
+  
+  /* 更精致的卡片样式 */
+  .card {
+    @apply bg-white rounded-2xl border border-gray-100 shadow-soft hover:shadow-medium transition-all duration-300 hover:border-gray-200;
+  }
+  
+  .card-hover {
+    @apply transform hover:-translate-y-1 hover:shadow-strong;
+  }
+  
+  /* 更精致的输入框样式 */
+  .input-field {
+    @apply block w-full rounded-xl border-0 py-3 px-4 text-gray-900 shadow-soft ring-1 ring-inset ring-gray-200 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-500 focus:ring-offset-2 transition-all duration-200;
+  }
+  
+  /* 更精致的标签样式 */
+  .badge {
+    @apply inline-flex items-center rounded-full px-3 py-1 text-xs font-medium;
+  }
+  
+  .badge-primary {
+    @apply bg-gray-50 text-gray-700 ring-1 ring-inset ring-gray-500/20;
+  }
+  
+  .badge-secondary {
+    @apply bg-gray-50 text-gray-600 ring-1 ring-inset ring-gray-500/20;
+  }
+  
+  /* 更精致的间距系统，参考Clerk */
+  .section-padding {
+    @apply py-24 px-4 sm:px-6 lg:px-8;
+  }
+  
+  .container-max {
+    @apply max-w-7xl mx-auto;
+  }
+  
+  /* 更精致的渐变背景 */
+  .gradient-bg {
+    @apply bg-gradient-to-br from-gray-50 via-white to-gray-50;
+  }
+  
+  .gradient-bg-dark {
+    @apply bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900;
+  }
+  
+  /* 更精致的动画效果 */
+  .animate-fade-in-up {
+    @apply animate-[fadeInUp_0.6s_ease-out];
+  }
+  
+  .animate-fade-in-down {
+    @apply animate-[fadeInDown_0.6s_ease-out];
+  }
+  
+  .animate-fade-in-left {
+    @apply animate-[fadeInLeft_0.6s_ease-out];
+  }
+  
+  .animate-fade-in-right {
+    @apply animate-[fadeInRight_0.6s_ease-out];
+  }
+}
+
+@layer utilities {
+  /* 自定义动画关键帧 */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* 更精致的阴影系统，完全参考Clerk */
+  .shadow-soft {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  }
+  
+  .shadow-medium {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+  
+  .shadow-strong {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+}
