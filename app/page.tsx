@@ -76,20 +76,30 @@ export default function HomePage() {
     <div className="bg-white">
       <Navigation />
       
-      {/* Hero Section - 更精致的Clerk风格 */}
-      <div className="relative isolate overflow-hidden gradient-bg">
-        {/* 背景装饰 */}
-        <div className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80">
-          <div className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-gray-200 to-gray-300 opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" />
+      {/* Hero Section - 增加高度和动态科技感背景 */}
+      <div className="relative overflow-hidden bg-gradient-to-br from-gray-50 via-white to-gray-100 tech-grid">
+        {/* 动态科技感背景 */}
+        <div className="absolute inset-0">
+          {/* 动态光点 */}
+          <div className="absolute inset-0">
+            <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-blue-500 rounded-full animate-float opacity-60"></div>
+            <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-purple-500 rounded-full animate-glow opacity-40"></div>
+            <div className="absolute bottom-1/4 left-1/3 w-1.5 h-1.5 bg-cyan-500 rounded-full animate-float opacity-50"></div>
+            <div className="absolute top-1/2 right-1/4 w-1 h-1 bg-indigo-500 rounded-full animate-glow opacity-30"></div>
+            <div className="absolute bottom-1/3 left-1/2 w-1 h-1 bg-blue-400 rounded-full animate-float opacity-40"></div>
+          </div>
+          
+          {/* 流动光线 */}
+          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-blue-400/30 to-transparent animate-slide"></div>
+          <div className="absolute bottom-0 right-0 w-full h-1 bg-gradient-to-l from-transparent via-purple-400/30 to-transparent animate-slide" style={{animationDelay: '2s'}}></div>
         </div>
-        
-        <div className="mx-auto max-w-7xl px-6 py-16 lg:flex lg:px-8 lg:py-24">
+
+        <div className="relative mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:flex lg:px-8 lg:py-40">
           <div className="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl">
             <div className="mb-8">
-              <div className="inline-flex items-center space-x-2 rounded-full bg-gray-50 px-4 py-2 text-sm font-medium text-gray-700 ring-1 ring-inset ring-gray-200/50">
-                <SparklesIcon className="h-4 w-4" />
-                <span>最新动态</span>
-                <ArrowRightIcon className="h-4 w-4" />
+              <div className="inline-flex items-center rounded-full bg-white/80 backdrop-blur-sm px-3 py-1 text-sm font-medium text-gray-600 ring-1 ring-inset ring-gray-900/10 hover:bg-white/90 transition-all duration-200">
+                <SparklesIcon className="mr-2 h-4 w-4 text-blue-500" />
+                最新动态 →
               </div>
             </div>
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl lg:text-7xl">
@@ -100,28 +110,32 @@ export default function HomePage() {
               我们专注于为企业提供现代化的网站开发服务，结合最新的技术和设计理念，
               帮助您的品牌在数字世界中脱颖而出。
             </p>
-            <div className="mt-8 flex items-center gap-x-6">
+            <div className="mt-10 flex items-center gap-x-6">
               <a
                 href="/contact"
-                className="btn-primary group"
+                className="btn-primary"
               >
                 <span>开始项目</span>
-                <ArrowRightIcon className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                <ArrowRightIcon className="ml-2 h-4 w-4" />
               </a>
-              <a href="/cases" className="btn-outline group">
+              <a
+                href="/cases"
+                className="btn-outline"
+              >
                 <span>查看案例</span>
-                <ArrowRightIcon className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                <ArrowRightIcon className="ml-2 h-4 w-4" />
               </a>
             </div>
           </div>
-          <div className="mx-auto mt-12 flex max-w-2xl lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32">
-            <div className="max-w-2xl flex-none sm:max-w-3xl lg:max-w-2xl">
+          <div className="mt-16 sm:mt-24 lg:mt-0 lg:flex-shrink-0 lg:flex-grow">
+            <div className="relative mx-auto max-w-2xl sm:max-w-3xl lg:max-w-2xl">
               <div className="relative">
-                <div className="absolute -inset-2 bg-gradient-to-r from-gray-200 to-gray-300 rounded-2xl opacity-20 blur-lg"></div>
+                {/* 图片装饰背景 */}
+                <div className="absolute -inset-2 rounded-xl bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-cyan-500/20 blur-lg opacity-30 animate-pulse"></div>
                 <img
-                  src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                  className="relative w-full h-auto max-w-lg rounded-xl shadow-medium ring-1 ring-gray-900/10 bg-white/90 backdrop-blur-sm"
+                  src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80&w=800"
                   alt="App screenshot"
-                  className="relative w-full h-auto max-w-lg rounded-xl shadow-medium ring-1 ring-gray-900/10"
                 />
               </div>
             </div>
