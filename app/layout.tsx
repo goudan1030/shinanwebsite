@@ -5,8 +5,8 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Photinia - 专业的网站开发服务',
-  description: '我们提供现代化的网站开发服务，专注于用户体验和设计美学',
+  title: '杭州石楠文化科技有限公司 - 专业网站开发服务',
+  description: '杭州石楠文化科技有限公司专注于为企业提供现代化的网站开发服务，结合最新的技术和设计理念，帮助您的品牌在数字世界中脱颖而出。',
 }
 
 export default function RootLayout({

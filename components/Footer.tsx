@@ -50,15 +50,19 @@ export default function Footer() {
       <div className="container-max section-padding">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           {/* Company Info */}
-          <div className="space-y-8 xl:col-span-1">
-            <div className="flex items-center gap-2">
-              <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-r from-primary-500 to-primary-600 shadow-soft">
-                <SparklesIcon className="h-6 w-6 text-white" />
+          <div className="space-y-8">
+            <div className="flex items-center gap-3">
+              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-r from-gray-800 to-gray-900">
+                <svg className="h-5 w-5 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org2000/svg">
+                  <rect x="4" y="4" width="16" height="16" rx="4" fill="none" stroke="currentColor" strokeWidth="2"/>
+                  <path d="M8 8h4a2 2 0 0 1 2 2v0a2 2 0 0 1-2 2H8V8z" fill="currentColor"/>
+                  <path d="M8 16v-2h4" stroke="currentColor" strokeWidth="2"/>
+                </svg>
               </div>
-              <span className="text-2xl font-bold text-white">Photinia</span>
+              <span className="text-lg font-bold text-gray-900">杭州石楠文化科技有限公司</span>
             </div>
-            <p className="text-gray-300 text-sm leading-6">
-              我们致力于为客户提供最优质的网站开发服务，创造卓越的数字体验。
+            <p className="text-sm leading-6 text-gray-600">
+              专注于为企业提供现代化的网站开发服务，结合最新的技术和设计理念，帮助您的品牌在数字世界中脱颖而出。
             </p>
             <div className="flex space-x-4">
               {navigation.social.map((item) => (

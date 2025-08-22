@@ -30,7 +30,7 @@ export default function Navigation() {
                 </svg>
               </div>
               <span className="text-xl font-bold text-gray-900 group-hover:text-gray-700 transition-colors duration-200">
-                Photinia
+                杭州石楠文化科技有限公司
               </span>
             </div>
           </Link>
@@ -96,7 +96,7 @@ export default function Navigation() {
                     </svg>
                   </div>
                   <span className="text-xl font-bold text-gray-900">
-                    Photinia
+                    杭州石楠文化科技有限公司
                   </span>
                 </div>
               </Link>
