@@ -50,13 +50,13 @@ const team = [
   {
     name: 'Stewie',
     role: '设计总监',
-    image: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&h=256&q=80',
+    image: '/images/stewie.jpg',
     bio: '资深UI/UX设计师，擅长品牌视觉设计和用户界面设计，注重用户体验的每一个细节。',
   },
   {
     name: 'KK',
     role: '项目经理',
-    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&h=256&q=80',
+    image: '/images/kk.jpg',
     bio: 'PMP认证项目经理，拥有丰富的项目管理经验，确保项目按时高质量交付。',
   },
 ]
