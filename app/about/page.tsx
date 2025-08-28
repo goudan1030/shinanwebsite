@@ -36,54 +36,54 @@ const values = [
 
 const team = [
   {
-    name: '张明',
+    name: 'Cheng Lee',
     role: '创始人 & CEO',
-    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&h=256&q=80',
     bio: '拥有10年网站开发经验，曾就职于多家知名互联网公司，专注于用户体验设计和产品策略。',
   },
   {
-    name: '李华',
+    name: 'FENG',
     role: '技术总监',
-    image: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&h=256&q=80',
     bio: '全栈开发专家，精通React、Node.js等现代技术栈，负责技术架构设计和团队技术指导。',
   },
   {
-    name: '王芳',
+    name: 'Stewie',
     role: '设计总监',
-    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+    image: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&h=256&q=80',
     bio: '资深UI/UX设计师，擅长品牌视觉设计和用户界面设计，注重用户体验的每一个细节。',
   },
   {
-    name: '陈强',
+    name: 'KK',
     role: '项目经理',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&h=256&q=80',
     bio: 'PMP认证项目经理，拥有丰富的项目管理经验，确保项目按时高质量交付。',
   },
 ]
 
 const milestones = [
   {
-    year: '2019',
+    year: '2010',
     title: '公司成立',
-    description: 'Photinia在北京成立，开始专注于网站开发服务',
+    description: 'Yego Design在杭州成立，开始专注于网站开发服务',
   },
   {
-    year: '2020',
+    year: '2012',
     title: '业务扩展',
     description: '服务范围扩展到电商平台和移动应用开发',
   },
   {
-    year: '2021',
+    year: '2015',
     title: '团队壮大',
     description: '核心团队扩展到15人，技术能力显著提升',
   },
   {
-    year: '2022',
+    year: '2018',
     title: '行业认可',
     description: '获得多个行业奖项，客户满意度达到98%',
   },
   {
-    year: '2023',
+    year: '2021',
     title: '技术升级',
     description: '全面采用现代化技术栈，提升开发效率',
   },
@@ -123,11 +123,11 @@ export default function AboutPage() {
                 我们的优势
               </h2>
               <p className="mt-6 text-lg leading-8 text-gray-600">
-                Photinia成立于2019年，由一群充满激情的开发者、设计师和产品经理组成。
+                Yego Design成立于2010年，由一群充满激情的开发者、设计师和产品经理组成。
                 我们相信，优秀的网站不仅仅是技术的展示，更是品牌故事和用户体验的完美结合。
               </p>
               <p className="mt-4 text-lg leading-8 text-gray-600">
-                五年来，我们为超过100家企业提供了专业的网站开发服务，涵盖各个行业和领域。
+                十多年来，我们为超过100家企业提供了专业的网站开发服务，涵盖各个行业和领域。
                 每一个项目都是我们团队智慧和努力的结晶，也是与客户深度合作的成果。
               </p>
               <div className="mt-8 flex items-center gap-6">
@@ -140,7 +140,7 @@ export default function AboutPage() {
                   <div className="text-sm text-gray-600">客户满意度</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-primary-600">5年+</div>
+                  <div className="text-3xl font-bold text-primary-600">10年+</div>
                   <div className="text-sm text-gray-600">行业经验</div>
                 </div>
               </div>

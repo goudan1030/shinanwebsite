@@ -17,13 +17,13 @@ import {
 const contactInfo = [
   {
     name: '邮箱',
-    value: 'contact@shinan.com',
+    value: '34793406@qq.com',
     icon: EnvelopeIcon,
     description: '我们会在24小时内回复您的邮件',
   },
   {
     name: '电话',
-    value: '+86 138 0000 0000',
+    value: '13003639946',
     icon: PhoneIcon,
     description: '工作日 9:00-18:00 为您服务',
   },
@@ -334,7 +334,19 @@ export default function ContactPage() {
                       </div>
                       <div>
                         <h3 className="text-lg font-semibold text-gray-900">{info.name}</h3>
-                        <p className="mt-1 text-lg text-gray-600">{info.value}</p>
+                        <p className="mt-1 text-lg text-gray-600">
+                          {info.name === '邮箱' ? (
+                            <a href="mailto:34793406@qq.com" className="hover:text-primary-600 transition-colors duration-200">
+                              {info.value}
+                            </a>
+                          ) : info.name === '电话' ? (
+                            <a href="tel:13003639946" className="hover:text-primary-600 transition-colors duration-200">
+                              {info.value}
+                            </a>
+                          ) : (
+                            info.value
+                          )}
+                        </p>
                         <p className="mt-1 text-sm text-gray-500">{info.description}</p>
                       </div>
                     </div>

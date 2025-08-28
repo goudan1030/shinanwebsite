@@ -64,7 +64,7 @@ export default function Footer() {
                   <path d="M8 16v-2h4" stroke="currentColor" strokeWidth="2"/>
                 </svg>
               </div>
-              <span className="text-xl font-bold text-white">杭州石楠文化科技有限公司</span>
+              <span className="text-xl font-bold text-white">Yego Design</span>
             </div>
             <p className="text-base leading-7 text-gray-300 max-w-md">
               我们是一家AI驱动的科技创新型公司，专注于为企业提供全方位的数字解决方案，包括网站开发、移动应用开发、企业系统开发、AI应用开发等，结合最新的AI技术和设计理念，帮助您的品牌在数字世界中脱颖而出。
@@ -137,13 +137,13 @@ export default function Footer() {
                     <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gray-800 text-gray-400">
                       <EnvelopeIcon className="h-4 w-4" />
                     </div>
-                    <span className="text-base leading-6 text-gray-300 whitespace-nowrap">contact@shinan.com</span>
+                    <a href="mailto:34793406@qq.com" className="text-base leading-6 text-gray-300 hover:text-white transition-colors duration-200 whitespace-nowrap">34793406@qq.com</a>
                   </li>
                   <li className="flex items-center space-x-3">
                     <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gray-800 text-gray-400">
                       <PhoneIcon className="h-4 w-4" />
                     </div>
-                    <span className="text-base leading-6 text-gray-300 whitespace-nowrap">+86 138 0000 0000</span>
+                    <a href="tel:13003639946" className="text-base leading-6 text-gray-300 hover:text-white transition-colors duration-200 whitespace-nowrap">13003639946</a>
                   </li>
                   <li className="flex items-center space-x-3">
                     <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gray-800 text-gray-400">
@@ -159,7 +159,7 @@ export default function Footer() {
         
         <div className="mt-12 border-t border-gray-800 pt-6">
           <p className="text-sm leading-5 text-gray-400 text-center">
-            &copy; 2024 杭州石楠文化科技有限公司. 保留所有权利。
+            &copy; 2024 Yego Design. 保留所有权利。
           </p>
         </div>
       </div>

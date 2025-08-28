@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { Bars3Icon, XMarkIcon, SparklesIcon, ChevronDownIcon } from '@heroicons/react/24/outline'
+import { motion } from 'framer-motion'
 
 const navigation = [
   { name: '首页', href: '/' },
@@ -30,40 +31,48 @@ export default function Navigation() {
                 </svg>
               </div>
               <span className="text-xl font-bold text-gray-900 group-hover:text-gray-700 transition-colors duration-200">
-                石楠科技
+                Yego Design
               </span>
             </div>
           </Link>
           
-          {/* Desktop Navigation - 跟随在logo右侧，不居中 */}
-          <div className="hidden lg:flex lg:gap-x-6 ml-12">
-            {navigation.map((item) => (
+                  {/* Desktop Navigation - 跟随在logo右侧，不居中 */}
+        <div className="hidden lg:flex lg:gap-x-6 ml-12">
+          {navigation.map((item, index) => (
+            <motion.div
+              key={item.name}
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1 }}
+            >
               <Link
-                key={item.name}
                 href={item.href}
                 className="relative text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-black/5 group"
               >
                 {item.name}
                 <span className="absolute inset-x-0 -bottom-px h-0.5 bg-gray-200 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
               </Link>
-            ))}
-          </div>
+            </motion.div>
+          ))}
+        </div>
         </div>
         
         {/* CTA Buttons - 更精致的按钮设计，调整高度和间距 */}
         <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-6">
-          <Link 
-            href="/contact" 
-            className="text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors duration-200 py-2 px-4 rounded-lg hover:bg-black/5"
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.3 }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
-            登录
-          </Link>
-          <Link 
-            href="/contact" 
-            className="bg-gray-900 hover:bg-gray-800 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition-all duration-200 shadow-soft hover:shadow-medium transform hover:scale-105"
-          >
-            开始项目
-          </Link>
+            <Link 
+              href="/contact" 
+              className="bg-gray-900 hover:bg-gray-800 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition-all duration-200 shadow-soft hover:shadow-medium"
+            >
+              开始项目
+            </Link>
+          </motion.div>
         </div>
         
         {/* Mobile menu button - 更精致的移动端按钮 */}
@@ -81,9 +90,25 @@ export default function Navigation() {
       
       {/* Mobile Navigation - 更精致的移动端菜单 */}
       {mobileMenuOpen && (
-        <div className="lg:hidden">
-          <div className="fixed inset-0 z-50 bg-black/20 backdrop-blur-sm" />
-          <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white/95 backdrop-blur-md px-6 py-6 sm:max-w-sm shadow-strong border-l border-gray-200/20">
+        <motion.div 
+          className="lg:hidden"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+        >
+          <motion.div 
+            className="fixed inset-0 z-50 bg-black/20 backdrop-blur-sm"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          />
+          <motion.div 
+            className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white/95 backdrop-blur-md px-6 py-6 sm:max-w-sm shadow-strong border-l border-gray-200/20"
+            initial={{ x: '100%' }}
+            animate={{ x: 0 }}
+            exit={{ x: '100%' }}
+            transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+          >
             <div className="flex items-center justify-between mb-8">
               <Link href="/" className="-m-1.5 p-1.5" onClick={() => setMobileMenuOpen(false)}>
                 <div className="flex items-center gap-3">
@@ -96,7 +121,7 @@ export default function Navigation() {
                     </svg>
                   </div>
                   <span className="text-xl font-bold text-gray-900">
-                    石楠科技
+                    Yego Design
                   </span>
                 </div>
               </Link>
@@ -112,37 +137,42 @@ export default function Navigation() {
             <div className="flow-root">
               <div className="-my-6 divide-y divide-gray-100/50">
                 <div className="space-y-1 py-6">
-                  {navigation.map((item) => (
-                    <Link
+                  {navigation.map((item, index) => (
+                    <motion.div
                       key={item.name}
-                      href={item.href}
-                      className="-mx-3 block rounded-xl px-3 py-3 text-base font-medium text-gray-900 hover:bg-gray-50/80 hover:text-gray-700 transition-all duration-200"
-                      onClick={() => setMobileMenuOpen(false)}
+                      initial={{ opacity: 0, x: 20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: index * 0.1 }}
                     >
-                      {item.name}
-                    </Link>
+                      <Link
+                        href={item.href}
+                        className="-mx-3 block rounded-xl px-3 py-3 text-base font-medium text-gray-900 hover:bg-gray-50/80 hover:text-gray-700 transition-all duration-200"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        {item.name}
+                      </Link>
+                    </motion.div>
                   ))}
                 </div>
                 <div className="py-6 space-y-3">
-                  <Link
-                    href="/contact"
-                    className="block w-full text-center text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors duration-200 py-2.5 px-4 rounded-lg hover:bg-gray-50/80"
-                    onClick={() => setMobileMenuOpen(false)}
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.4 }}
                   >
-                    登录
-                  </Link>
-                  <Link
-                    href="/contact"
-                    className="block w-full text-center bg-gray-900 hover:bg-gray-800 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition-all duration-200"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    开始项目
-                  </Link>
+                    <Link
+                      href="/contact"
+                      className="block w-full text-center bg-gray-900 hover:bg-gray-800 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition-all duration-200"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      开始项目
+                    </Link>
+                  </motion.div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       )}
     </header>
   )

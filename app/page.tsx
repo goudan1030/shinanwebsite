@@ -2,6 +2,18 @@ import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import Counter from '@/components/Counter'
 import { 
+  ScrollReveal, 
+  FloatingElement, 
+  PulseElement, 
+  GradientText,
+  HoverScaleElement,
+  HoverRotateElement,
+  HoverGlowElement,
+  BounceInElement,
+  SlideInElement,
+  ParticleBackground
+} from '@/components/AnimatedComponents'
+import { 
   CodeBracketIcon, 
   DevicePhoneMobileIcon, 
   RocketLaunchIcon,
@@ -62,7 +74,7 @@ const stats = [
 
 const testimonials = [
   {
-    body: "石楠科技团队为我们打造的网站超出了预期，设计精美，功能完善，用户体验极佳。",
+    body: "Yego Design团队为我们打造的网站超出了预期，设计精美，功能完善，用户体验极佳。",
     author: {
       name: "张经理",
       handle: "ABC科技公司",
@@ -124,6 +136,9 @@ export default function HomePage() {
       
       {/* Hero Section - 简洁科技感背景 */}
       <div className="relative overflow-hidden bg-gradient-to-br from-gray-50 via-white to-gray-100">
+        {/* 粒子背景 */}
+        <ParticleBackground className="opacity-30" />
+        
         {/* 简洁科技感背景 */}
         <div className="absolute inset-0">
           {/* 微妙的网格背景 */}
@@ -135,49 +150,73 @@ export default function HomePage() {
 
         <div className="relative mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:flex lg:items-center lg:justify-between lg:px-8 lg:py-40">
           <div className="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl">
-            <div className="mb-8">
-              <div className="inline-flex items-center rounded-full bg-gray-50 px-4 py-2 text-sm font-medium text-gray-700 ring-1 ring-inset ring-gray-200/50">
-                <SparklesIcon className="mr-2 h-4 w-4" />
-                最新动态 →
+            <ScrollReveal delay={0.2}>
+              <div className="mb-8">
+                <HoverGlowElement>
+                  <div className="inline-flex items-center rounded-full bg-gray-50 px-4 py-2 text-sm font-medium text-gray-700 ring-1 ring-inset ring-gray-200/50">
+                    <SparklesIcon className="mr-2 h-4 w-4" />
+                    最新动态 →
+                  </div>
+                </HoverGlowElement>
               </div>
-            </div>
-            <h1 className="text-3xl font-bold tracking-tight text-gray-900">
-              打造卓越的
-              <span className="text-gray-900">数字体验</span>
-            </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
-              我们是一家AI驱动的科技创新型公司，专注于为企业提供全方位的数字解决方案，包括网站开发、移动应用开发、企业系统开发、AI应用开发等，
-              结合最新的AI技术和设计理念，帮助您的品牌在数字世界中脱颖而出。
-            </p>
-            <div className="mt-10 flex items-center gap-x-6">
-              <a
-                href="/contact"
-                className="btn-primary"
-              >
-                <span>开始项目</span>
-                <ArrowRightIcon className="ml-2 h-4 w-4" />
-              </a>
-              <a
-                href="/cases"
-                className="btn-outline"
-              >
-                <span>查看案例</span>
-                <ArrowRightIcon className="ml-2 h-4 w-4" />
-              </a>
-            </div>
+            </ScrollReveal>
+            
+            <ScrollReveal delay={0.4}>
+              <h1 className="text-3xl font-bold tracking-tight text-gray-900">
+                打造卓越的
+                <GradientText className="text-gray-900">数字体验</GradientText>
+              </h1>
+            </ScrollReveal>
+            
+            <ScrollReveal delay={0.6}>
+              <p className="mt-6 text-lg leading-8 text-gray-600">
+                我们是一家AI驱动的科技创新型公司，专注于为企业提供全方位的数字解决方案，包括网站开发、移动应用开发、企业系统开发、AI应用开发等，
+                结合最新的AI技术和设计理念，帮助您的品牌在数字世界中脱颖而出。
+              </p>
+            </ScrollReveal>
+            
+            <ScrollReveal delay={0.8}>
+              <div className="mt-10 flex items-center gap-x-6">
+                <HoverScaleElement>
+                  <a
+                    href="/contact"
+                    className="btn-primary"
+                  >
+                    <span>开始项目</span>
+                    <ArrowRightIcon className="ml-2 h-4 w-4" />
+                  </a>
+                </HoverScaleElement>
+                <HoverScaleElement>
+                  <a
+                    href="/cases"
+                    className="btn-outline"
+                  >
+                    <span>查看案例</span>
+                    <ArrowRightIcon className="ml-2 h-4 w-4" />
+                  </a>
+                </HoverScaleElement>
+              </div>
+            </ScrollReveal>
           </div>
+          
           <div className="mt-16 sm:mt-24 lg:mt-0 lg:flex-shrink-0 lg:flex-1 lg:flex lg:justify-end">
-            <div className="relative mx-auto max-w-2xl sm:max-w-3xl lg:max-w-none lg:w-full lg:max-w-md">
-              <div className="relative">
-                {/* 简单的图片装饰 */}
-                <div className="absolute -inset-2 rounded-xl bg-gradient-to-r from-gray-200 to-gray-300 opacity-20 blur-lg"></div>
-                <img
-                  className="relative w-full h-auto max-w-lg rounded-xl shadow-medium ring-1 ring-gray-900/10"
-                  src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80&w=800"
-                  alt="App screenshot"
-                />
+            <ScrollReveal direction="right" delay={0.6}>
+              <div className="relative mx-auto max-w-2xl sm:max-w-3xl lg:max-w-none lg:w-full lg:max-w-md">
+                <FloatingElement>
+                  <div className="relative">
+                    {/* 简单的图片装饰 */}
+                    <div className="absolute -inset-2 rounded-xl bg-gradient-to-r from-gray-200 to-gray-300 opacity-20 blur-lg"></div>
+                    <HoverGlowElement>
+                      <img
+                        className="relative w-full h-auto max-w-lg rounded-xl shadow-medium ring-1 ring-gray-900/10"
+                        src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80&w=800"
+                        alt="App screenshot"
+                      />
+                    </HoverGlowElement>
+                  </div>
+                </FloatingElement>
               </div>
-            </div>
+            </ScrollReveal>
           </div>
         </div>
       </div>
@@ -495,99 +534,143 @@ export default function HomePage() {
       {/* Features Section - 更精致的卡片设计 */}
       <div className="section-padding bg-white">
         <div className="container-max">
-          <div className="mx-auto max-w-2xl lg:text-center">
-            <div className="inline-flex items-center space-x-2 rounded-full bg-gray-50 px-4 py-2 text-sm font-medium text-gray-700 ring-1 ring-inset ring-gray-200/50 mb-6">
-              <SparklesIcon className="h-4 w-4" />
-              <span>为什么选择我们</span>
+          <ScrollReveal>
+            <div className="mx-auto max-w-2xl lg:text-center">
+              <BounceInElement delay={0.2}>
+                <div className="inline-flex items-center space-x-2 rounded-full bg-gray-50 px-4 py-2 text-sm font-medium text-gray-700 ring-1 ring-inset ring-gray-200/50 mb-6">
+                  <SparklesIcon className="h-4 w-4" />
+                  <span>为什么选择我们</span>
+                </div>
+              </BounceInElement>
+              <ScrollReveal delay={0.4}>
+                <h2 className="text-3xl font-bold tracking-tight text-gray-900">
+                  我们的服务
+                </h2>
+              </ScrollReveal>
+              <ScrollReveal delay={0.6}>
+                <p className="mt-6 text-lg leading-8 text-gray-600">
+                  作为AI驱动的科技创新型公司，我们提供从网站开发到移动应用、企业系统、AI应用的全方位数字解决方案，
+                  每个服务都融入最新的AI技术，确保为客户提供最优质的技术支持和用户体验。
+                </p>
+              </ScrollReveal>
             </div>
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900">
-              我们的服务
-            </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
-              作为AI驱动的科技创新型公司，我们提供从网站开发到移动应用、企业系统、AI应用的全方位数字解决方案，
-              每个服务都融入最新的AI技术，确保为客户提供最优质的技术支持和用户体验。
-            </p>
-          </div>
+          </ScrollReveal>
           
           <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
             <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3">
               {/* 现代化技术栈 */}
-              <div className="group bg-white rounded-xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 hover:border-gray-200">
-                <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-gray-50 mb-6 group-hover:bg-gray-100 transition-colors duration-300">
-                  <svg className="h-6 w-6 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-                  </svg>
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">现代化技术栈</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  使用最新的React、Next.js和Tailwind CSS技术，确保网站性能和用户体验。
-                </p>
-              </div>
+              <ScrollReveal delay={0.1}>
+                <HoverScaleElement>
+                  <div className="group bg-white rounded-xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 hover:border-gray-200">
+                    <HoverRotateElement>
+                      <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-gray-50 mb-6 group-hover:bg-gray-100 transition-colors duration-300">
+                        <svg className="h-6 w-6 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                        </svg>
+                      </div>
+                    </HoverRotateElement>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-3">现代化技术栈</h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      使用最新的React、Next.js和Tailwind CSS技术，确保网站性能和用户体验。
+                    </p>
+                  </div>
+                </HoverScaleElement>
+              </ScrollReveal>
 
               {/* 响应式设计 */}
-              <div className="group bg-white rounded-xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 hover:border-gray-200">
-                <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-gray-50 mb-6 group-hover:bg-gray-100 transition-colors duration-300">
-                  <svg className="h-6 w-6 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                  </svg>
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">响应式设计</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  完美适配各种设备，从手机到桌面，提供一致的用户体验。
-                </p>
-              </div>
+              <ScrollReveal delay={0.2}>
+                <HoverScaleElement>
+                  <div className="group bg-white rounded-xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 hover:border-gray-200">
+                    <HoverRotateElement>
+                      <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-gray-50 mb-6 group-hover:bg-gray-100 transition-colors duration-300">
+                        <svg className="h-6 w-6 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                        </svg>
+                      </div>
+                    </HoverRotateElement>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-3">响应式设计</h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      完美适配各种设备，从手机到桌面，提供一致的用户体验。
+                    </p>
+                  </div>
+                </HoverScaleElement>
+              </ScrollReveal>
 
               {/* 快速部署 */}
-              <div className="group bg-white rounded-xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 hover:border-gray-200">
-                <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-gray-50 mb-6 group-hover:bg-gray-100 transition-colors duration-300">
-                  <svg className="h-6 w-6 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">快速部署</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  优化的构建流程，确保网站快速加载和部署。
-                </p>
-              </div>
+              <ScrollReveal delay={0.3}>
+                <HoverScaleElement>
+                  <div className="group bg-white rounded-xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 hover:border-gray-200">
+                    <HoverRotateElement>
+                      <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-gray-50 mb-6 group-hover:bg-gray-100 transition-colors duration-300">
+                        <svg className="h-6 w-6 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                      </div>
+                    </HoverRotateElement>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-3">快速部署</h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      优化的构建流程，确保网站快速加载和部署。
+                    </p>
+                  </div>
+                </HoverScaleElement>
+              </ScrollReveal>
 
               {/* SEO优化 */}
-              <div className="group bg-white rounded-xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 hover:border-gray-200">
-                <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-gray-50 mb-6 group-hover:bg-gray-100 transition-colors duration-300">
-                  <svg className="h-6 w-6 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                  </svg>
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">SEO优化</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  专业的搜索引擎优化，提升网站在搜索结果中的排名和可见性。
-                </p>
-              </div>
+              <ScrollReveal delay={0.4}>
+                <HoverScaleElement>
+                  <div className="group bg-white rounded-xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 hover:border-gray-200">
+                    <HoverRotateElement>
+                      <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-gray-50 mb-6 group-hover:bg-gray-100 transition-colors duration-300">
+                        <svg className="h-6 w-6 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                      </div>
+                    </HoverRotateElement>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-3">SEO优化</h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      专业的搜索引擎优化，提升网站在搜索结果中的排名和可见性。
+                    </p>
+                  </div>
+                </HoverScaleElement>
+              </ScrollReveal>
 
               {/* 安全可靠 */}
-              <div className="group bg-white rounded-xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 hover:border-gray-200">
-                <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-gray-50 mb-6 group-hover:bg-gray-100 transition-colors duration-300">
-                  <svg className="h-6 w-6 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                  </svg>
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">安全可靠</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  采用最新的安全标准和最佳实践，保护您的网站和用户数据安全。
-                </p>
-              </div>
+              <ScrollReveal delay={0.5}>
+                <HoverScaleElement>
+                  <div className="group bg-white rounded-xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 hover:border-gray-200">
+                    <HoverRotateElement>
+                      <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-gray-50 mb-6 group-hover:bg-gray-100 transition-colors duration-300">
+                        <svg className="h-6 w-6 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        </svg>
+                      </div>
+                    </HoverRotateElement>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-3">安全可靠</h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      采用最新的安全标准和最佳实践，保护您的网站和用户数据安全。
+                    </p>
+                  </div>
+                </HoverScaleElement>
+              </ScrollReveal>
 
               {/* 持续支持 */}
-              <div className="group bg-white rounded-xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 hover:border-gray-200">
-                <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-gray-50 mb-6 group-hover:bg-gray-100 transition-colors duration-300">
-                  <svg className="h-6 w-6 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
-                  </svg>
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">持续支持</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  提供长期的技术支持和维护服务，确保您的网站始终保持最佳状态。
-                </p>
-              </div>
+              <ScrollReveal delay={0.6}>
+                <HoverScaleElement>
+                  <div className="group bg-white rounded-xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 hover:border-gray-200">
+                    <HoverRotateElement>
+                      <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-gray-50 mb-6 group-hover:bg-gray-100 transition-colors duration-300">
+                        <svg className="h-6 w-6 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+                        </svg>
+                      </div>
+                    </HoverRotateElement>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-3">持续支持</h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      提供长期的技术支持和维护服务，确保您的网站始终保持最佳状态。
+                    </p>
+                  </div>
+                </HoverScaleElement>
+              </ScrollReveal>
             </div>
           </div>
         </div>
@@ -599,14 +682,18 @@ export default function HomePage() {
           <div className="mx-auto max-w-7xl">
             <div className="mx-auto mt-16 grid max-w-7xl grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
               {stats.map((stat, index) => (
-                <div key={stat.id} className="text-center animate-fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
-                  <Counter 
-                    end={parseInt(stat.value.replace(/\D/g, ''))} 
-                    suffix={stat.value.includes('+') ? '+' : stat.value.includes('%') ? '%' : stat.value.includes('年') ? '年+' : ''}
-                  />
-                  <div className="text-lg font-semibold text-gray-300 mb-1">{stat.name}</div>
-                  <div className="text-sm text-gray-400">{stat.description}</div>
-                </div>
+                <ScrollReveal key={stat.id} delay={index * 0.1}>
+                  <PulseElement>
+                    <div className="text-center">
+                      <Counter 
+                        end={parseInt(stat.value.replace(/\D/g, ''))} 
+                        suffix={stat.value.includes('+') ? '+' : stat.value.includes('%') ? '%' : stat.value.includes('年') ? '年+' : ''}
+                      />
+                      <div className="text-lg font-semibold text-gray-300 mb-1">{stat.name}</div>
+                      <div className="text-sm text-gray-400">{stat.description}</div>
+                    </div>
+                  </PulseElement>
+                </ScrollReveal>
               ))}
             </div>
           </div>
@@ -616,41 +703,48 @@ export default function HomePage() {
       {/* Testimonials Section - 更精致的评价展示 */}
       <div className="section-padding bg-gray-50">
         <div className="container-max">
-          <div className="mx-auto max-w-2xl lg:text-center">
-            <div className="inline-flex items-center space-x-2 rounded-full bg-gray-50 px-4 py-2 text-sm font-medium text-gray-700 ring-1 ring-inset ring-gray-200/50 mb-6">
-              <StarIcon className="h-4 w-4" />
-              <span>客户评价</span>
+          <ScrollReveal>
+            <div className="mx-auto max-w-2xl lg:text-center">
+              <BounceInElement delay={0.2}>
+                <div className="inline-flex items-center space-x-2 rounded-full bg-gray-50 px-4 py-2 text-sm font-medium text-gray-700 ring-1 ring-inset ring-gray-200/50 mb-6">
+                  <StarIcon className="h-4 w-4" />
+                  <span>客户评价</span>
+                </div>
+              </BounceInElement>
+              <ScrollReveal delay={0.4}>
+                <h2 className="text-3xl font-bold tracking-tight text-gray-900">
+                  客户评价
+                </h2>
+              </ScrollReveal>
             </div>
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900">
-              客户评价
-            </h2>
-          </div>
+          </ScrollReveal>
           <div className="mx-auto mt-16 grid max-w-7xl grid-cols-1 gap-8 text-sm leading-6 text-gray-900 sm:mt-20 sm:grid-cols-2 lg:grid-cols-3">
             {testimonials.map((testimonial, testimonialIdx) => (
-              <figure
-                key={testimonialIdx}
-                className="card card-hover p-8"
-              >
-                <div className="flex items-center gap-1 mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <StarIcon key={i} className="h-5 w-5 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                <blockquote className="text-base leading-7 text-gray-900 mb-6">
-                  <p>"{testimonial.body}"</p>
-                </blockquote>
-                <figcaption className="flex items-center gap-4">
-                  <img
-                    className="h-12 w-12 rounded-full bg-gray-50 ring-2 ring-white"
-                    src={testimonial.author.imageUrl}
-                    alt=""
-                  />
-                  <div>
-                    <div className="font-semibold text-gray-900">{testimonial.author.name}</div>
-                    <div className="text-gray-600">{testimonial.author.handle}</div>
-                  </div>
-                </figcaption>
-              </figure>
+              <ScrollReveal key={testimonialIdx} delay={testimonialIdx * 0.1}>
+                <HoverScaleElement>
+                  <figure className="card card-hover p-8">
+                    <div className="flex items-center gap-1 mb-4">
+                      {[...Array(testimonial.rating)].map((_, i) => (
+                        <StarIcon key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+                      ))}
+                    </div>
+                    <blockquote className="text-base leading-7 text-gray-900 mb-6">
+                      <p>"{testimonial.body}"</p>
+                    </blockquote>
+                    <figcaption className="flex items-center gap-4">
+                      <img
+                        className="h-12 w-12 rounded-full bg-gray-50 ring-2 ring-white"
+                        src={testimonial.author.imageUrl}
+                        alt=""
+                      />
+                      <div>
+                        <div className="font-semibold text-gray-900">{testimonial.author.name}</div>
+                        <div className="text-gray-600">{testimonial.author.handle}</div>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </HoverScaleElement>
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -659,37 +753,49 @@ export default function HomePage() {
       {/* CTA Section - 更精致的行动号召 */}
       <div className="section-padding bg-white">
         <div className="container-max">
-          <div className="relative isolate overflow-hidden bg-gray-900 rounded-3xl px-6 py-24 shadow-strong sm:px-24 xl:py-32">
-            {/* 背景装饰 */}
-            <div className="absolute inset-0 -z-10 opacity-10">
-              <svg className="h-full w-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-                <defs>
-                  <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
-                    <path d="M 10 0 L 0 0 0 10" fill="none" stroke="currentColor" strokeWidth="0.5"/>
-                  </pattern>
-                </defs>
-                <rect width="100" height="100" fill="url(#grid)"/>
-              </svg>
+          <ScrollReveal>
+            <div className="relative isolate overflow-hidden bg-gray-900 rounded-3xl px-6 py-24 shadow-strong sm:px-24 xl:py-32">
+              {/* 背景装饰 */}
+              <div className="absolute inset-0 -z-10 opacity-10">
+                <svg className="h-full w-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                  <defs>
+                    <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
+                      <path d="M 10 0 L 0 0 0 10" fill="none" stroke="currentColor" strokeWidth="0.5"/>
+                    </pattern>
+                  </defs>
+                  <rect width="100" height="100" fill="url(#grid)"/>
+                </svg>
+              </div>
+              
+              <ScrollReveal delay={0.2}>
+                <h2 className="mx-auto max-w-2xl text-center text-3xl font-bold tracking-tight text-white">
+                  准备开始您的项目了吗？
+                </h2>
+              </ScrollReveal>
+              <ScrollReveal delay={0.4}>
+                <p className="mx-auto mt-2 max-w-xl text-center text-lg leading-8 text-gray-300">
+                  让我们携手合作，共同打造一个令人印象深刻的数字体验。
+                </p>
+              </ScrollReveal>
+              <ScrollReveal delay={0.6}>
+                <div className="mt-10 flex items-center justify-center gap-x-6">
+                  <HoverScaleElement>
+                    <a
+                      href="/contact"
+                      className="bg-white text-gray-900 hover:bg-gray-50 font-medium py-2.5 px-4 rounded-lg transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-900 shadow-soft hover:shadow-medium"
+                    >
+                      联系我们
+                    </a>
+                  </HoverScaleElement>
+                  <HoverScaleElement>
+                    <a href="/about" className="text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200">
+                      了解更多 <ArrowRightIcon className="inline ml-1 h-4 w-4" />
+                    </a>
+                  </HoverScaleElement>
+                </div>
+              </ScrollReveal>
             </div>
-            
-            <h2 className="mx-auto max-w-2xl text-center text-3xl font-bold tracking-tight text-white">
-              准备开始您的项目了吗？
-            </h2>
-            <p className="mx-auto mt-2 max-w-xl text-center text-lg leading-8 text-gray-300">
-              让我们携手合作，共同打造一个令人印象深刻的数字体验。
-            </p>
-            <div className="mt-10 flex items-center justify-center gap-x-6">
-              <a
-                href="/contact"
-                className="bg-white text-gray-900 hover:bg-gray-50 font-medium py-2.5 px-4 rounded-lg transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-900 shadow-soft hover:shadow-medium"
-              >
-                联系我们
-              </a>
-              <a href="/about" className="text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200">
-                了解更多 <ArrowRightIcon className="inline ml-1 h-4 w-4" />
-              </a>
-            </div>
-          </div>
+          </ScrollReveal>
         </div>
       </div>
 

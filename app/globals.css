@@ -100,6 +100,99 @@
   .animate-fade-in-right {
     @apply animate-[fadeInRight_0.6s_ease-out];
   }
+
+  /* 新增：浮动动画效果 */
+  .float-animation {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  /* 新增：脉冲动画效果 */
+  .pulse-glow {
+    animation: pulseGlow 2s ease-in-out infinite;
+  }
+
+  /* 新增：渐变文字效果 */
+  .gradient-text {
+    background: linear-gradient(to right, #2563eb, #9333ea, #ec4899);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* 新增：悬停缩放效果 */
+  .hover-scale {
+    transition: transform 0.3s;
+  }
+  .hover-scale:hover {
+    transform: scale(1.1);
+  }
+
+  /* 新增：悬停旋转效果 */
+  .hover-rotate {
+    transition: transform 0.3s;
+  }
+  .hover-rotate:hover {
+    transform: rotate(12deg);
+  }
+
+  /* 新增：悬停发光效果 */
+  .hover-glow {
+    transition: all 0.3s;
+  }
+  .hover-glow:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05), 0 0 20px rgba(59, 130, 246, 0.25);
+  }
+
+  /* 新增：打字机效果 */
+  .typewriter {
+    animation: typewriter 2s steps(40) 1s 1 normal both;
+  }
+
+  /* 新增：弹跳动画 */
+  .bounce-in {
+    animation: bounceIn 0.8s ease-out;
+  }
+
+  /* 新增：滑入动画 */
+  .slide-in-left {
+    animation: slideInLeft 0.8s ease-out;
+  }
+
+  .slide-in-right {
+    animation: slideInRight 0.8s ease-out;
+  }
+
+  /* 新增：3D翻转效果 */
+  .flip-card {
+    perspective: 1000px;
+  }
+
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s;
+    transform-style: preserve-3d;
+  }
+
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  /* 新增：波浪动画 */
+  .wave-animation {
+    animation: wave 2s ease-in-out infinite;
+  }
+
+  /* 新增：粒子效果 */
+  .particle {
+    position: absolute;
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: #3b82f6;
+    border-radius: 9999px;
+    opacity: 0.6;
+  }
 }
 
 @layer utilities {
@@ -147,7 +240,135 @@
       transform: translateX(0);
     }
   }
-  
+
+  /* 新增：浮动动画 */
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  /* 新增：脉冲发光动画 */
+  @keyframes pulseGlow {
+    0%, 100% {
+      box-shadow: 0 0 5px rgba(59, 130, 246, 0.5);
+    }
+    50% {
+      box-shadow: 0 0 20px rgba(59, 130, 246, 0.8);
+    }
+  }
+
+  /* 新增：打字机动画 */
+  @keyframes typewriter {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  /* 新增：弹跳进入动画 */
+  @keyframes bounceIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.3);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+    70% {
+      transform: scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  /* 新增：滑入动画 */
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  /* 新增：波浪动画 */
+  @keyframes wave {
+    0%, 100% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(5deg);
+    }
+    75% {
+      transform: rotate(-5deg);
+    }
+  }
+
+  /* 新增：渐变背景动画 */
+  @keyframes gradientShift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  /* 新增：闪烁动画 */
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+
+  /* 新增：心跳动画 */
+  @keyframes heartbeat {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+  }
+
+  /* 新增：脉冲动画 */
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
+
   /* 更精致的阴影系统，完全参考Clerk */
   .shadow-soft {
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
@@ -160,6 +381,67 @@
   .shadow-strong {
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   }
+
+  /* 新增：发光阴影 */
+  .shadow-glow {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+  }
+
+  /* 新增：彩虹阴影 */
+  .shadow-rainbow {
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.3), 0 0 40px rgba(0, 255, 0, 0.2), 0 0 60px rgba(0, 0, 255, 0.1);
+  }
 }
 
-/* 移除复杂的动画，保持简洁 */
+/* 新增：滚动条样式 */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* 新增：选择文本样式 */
+::selection {
+  background: rgba(59, 130, 246, 0.2);
+  color: #1f2937;
+}
+
+/* 新增：焦点样式 */
+.focus-ring {
+  @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+}
+
+/* 新增：加载动画 */
+.loading-dots {
+  display: inline-flex;
+  gap: 0.25rem;
+}
+
+.loading-dots > div {
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: currentColor;
+  border-radius: 9999px;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.loading-dots > div:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loading-dots > div:nth-child(3) {
+  animation-delay: 0.4s;
+}
