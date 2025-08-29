@@ -380,40 +380,7 @@ export default function ContactPage() {
         </div>
       </div>
 
-      {/* Map Section - 黑色风格地图展示 */}
-      <div className="bg-gray-900">
-        <div className="container-max py-12">
-          <div className="mx-auto max-w-2xl lg:text-center mb-8">
-            <div className="inline-flex items-center space-x-2 rounded-full bg-gray-800 px-4 py-2 text-sm font-medium text-gray-300 ring-1 ring-inset ring-gray-700 mb-6">
-              <MapPinIcon className="h-4 w-4" />
-              <span>我们的位置</span>
-            </div>
-            <h2 className="text-3xl font-bold tracking-tight text-white">
-              欢迎到访
-            </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-300">
-              我们位于杭州市西湖区，交通便利，欢迎预约到访，面对面交流项目细节。
-            </p>
-          </div>
-          
-          <div className="w-full">
-            <div className="w-full overflow-hidden rounded-2xl">
-              <div className="aspect-[3/1] bg-gray-800">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3051.1234567890123!2d116.1234567890123!3d39.1234567890123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMznCsDA3JzM0LjQiTiAxMTbCsDA3JzM0LjQiRQ!5e0!3m2!1sen!2scn!4v1234567890123"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="Photinia Office Location"
-                ></iframe>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+
 
       {/* FAQ Section - 更精致的常见问题 */}
       <div className="section-padding bg-white">
