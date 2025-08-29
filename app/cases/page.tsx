@@ -219,11 +219,11 @@ export default function CasesPage() {
                     </div>
                   </div>
                   
-                  {/* View Details Button */}
-                  <button className="w-full btn-outline group">
+                  {/* View Details Button - 暂时隐藏 */}
+                  {/* <button className="w-full btn-outline group">
                     查看详情
                     <ArrowRightIcon className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                  </button>
+                  </button> */}
                 </div>
               </article>
             ))}
