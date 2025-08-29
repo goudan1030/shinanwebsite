@@ -38,13 +38,13 @@ const team = [
   {
     name: 'Cheng Lee',
     role: '创始人 & CEO',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&h=256&q=80',
+    image: '/images/cheng.jpg',
     bio: '拥有10年网站开发经验，曾就职于多家知名互联网公司，专注于用户体验设计和产品策略。',
   },
   {
     name: 'FENG',
     role: '技术总监',
-    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&h=256&q=80',
+    image: '/images/feng.jpg',
     bio: '全栈开发专家，精通React、Node.js等现代技术栈，负责技术架构设计和团队技术指导。',
   },
   {
@@ -80,7 +80,7 @@ const milestones = [
   {
     year: '2018',
     title: '行业认可',
-    description: '获得多个行业奖项，客户满意度达到98%',
+    description: '获得多个行业信赖，客户满意度达到98%',
   },
   {
     year: '2021',
@@ -89,6 +89,11 @@ const milestones = [
   },
   {
     year: '2024',
+    title: '拥抱AI',
+    description: '全面拥抱人工智能技术，将AI功能融入网站开发和服务中，为客户提供更智能的解决方案',
+  },
+  {
+    year: '2025',
     title: '未来展望',
     description: '计划扩展到更多城市，服务更多客户',
   },
