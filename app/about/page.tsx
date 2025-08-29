@@ -42,22 +42,22 @@ const team = [
     bio: '拥有10年网站开发经验，曾就职于多家知名互联网公司，专注于用户体验设计和产品策略。',
   },
   {
-    name: 'FENG',
-    role: '技术总监',
-    image: '/images/feng.jpg',
-    bio: '全栈开发专家，精通React、Node.js等现代技术栈，负责技术架构设计和团队技术指导。',
-  },
-  {
     name: 'Stewie',
     role: '设计总监',
     image: '/images/stewie.jpg',
     bio: '资深UI/UX设计师，擅长品牌视觉设计和用户界面设计，注重用户体验的每一个细节。',
   },
   {
+    name: 'FENG',
+    role: '技术总监',
+    image: '/images/feng.jpg',
+    bio: '全栈开发专家，精通React、Node.js等现代技术栈，负责技术架构设计和团队技术指导。',
+  },
+  {
     name: 'KK',
     role: '项目经理',
     image: '/images/kk.jpg',
-    bio: 'PMP认证项目经理，拥有丰富的项目管理经验，确保项目按时高质量交付。',
+    bio: '拥有丰富的项目管理经验，确保项目按时高质量交付。',
   },
 ]
 
